@@ -1,0 +1,116 @@
+{
+  "run_id": "20260311_203842_6345",
+  "timestamp": "2026-03-11T20:39:09.879761",
+  "query": "Question: What is theranostics and how does it combine diagnostic and therapeutic approaches in precision medicine?",
+  "result": {
+    "answer": "Based on the provided documents, theranostics is an emerging field in precision medicine that **integrates diagnostic and therapeutic functions into a single, unified approach.**\n\nIt combines these two approaches in the following key ways:\n\n1.  **Simultaneous Development and Action:** The diagnostic method is often developed alongside the therapeutic intervention or can even be the *same* method used for both purposes. The diagnostic component identifies and visualizes the specific disease target (e.g., a tumor with a particular molecular signature), while the therapeutic component then precisely treats that identified target.\n\n2.  **Use of Targeting Agents:** Theranostics uses substances (like radiotracers, nanoparticles, or antibodies) that have an affinity for specific disease sites. A low, safe dose of a radioactive version of the substance is first used for **diagnostic imaging** (e.g., with PET or SPECT scans) to locate the disease. Once confirmed, a higher, therapeutic dose of the *same or similar* targeting substance is administered to deliver treatment (like radiation) directly to the diseased cells.\n\n3.  **Real-Time Monitoring and Personalization:** By combining imaging with therapy, clinicians can **monitor the treatment's effectiveness in real-time**. This allows for personalized adjustments to the treatment plan based on how the disease is responding, moving away from a one-size-fits-all approach.\n\n**Specific examples from the documents include:**\n\n*   **Nuclear Medicine:** Using radioactive iodine (Iodine-131) first to image and then to treat thyroid cancer.\n*   **Image-Guided Therapy:** Using PET scans with FDG to diagnose cancer, assess its stage, and later monitor if the therapy is working.\n*   **Targeted Drug Delivery:** Using nanoparticles that carry both a chemotherapy drug and an imaging agent (like iron oxide for MRI). The nanoparticle targets the tumor, allowing doctors to see it on a scan and then release the drug specifically at that site.",
+    "run_id": "20260311_203842_6345"
+  },
+  "num_documents": 1,
+  "traces": [
+    {
+      "event_type": "query_start",
+      "component": "rag_system",
+      "data": {
+        "run_id": "20260311_203842_6345",
+        "question": "Question: What is theranostics and how does it combine diagnostic and therapeutic approaches in precision medicine?",
+        "question_length": 115,
+        "top_k": 3,
+        "total_documents": 1
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_start",
+        "query": "Question: What is theranostics and how does it combine diagnostic and therapeutic approaches in precision medicine?",
+        "query_length": 115,
+        "top_k": 3,
+        "total_documents": 1
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_complete",
+        "num_retrieved": 1,
+        "scores": [
+          10
+        ],
+        "document_ids": [
+          0
+        ]
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_start",
+        "query": "Question: What is theranostics and how does it combine diagnostic and therapeutic approaches in precision medicine?",
+        "query_length": 115,
+        "top_k": 3,
+        "total_documents": 1
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_complete",
+        "num_retrieved": 1,
+        "scores": [
+          10
+        ],
+        "document_ids": [
+          0
+        ]
+      }
+    },
+    {
+      "event_type": "llm_call",
+      "component": "siliconflow_api",
+      "data": {
+        "operation": "generate_response",
+        "model": "deepseek-ai/DeepSeek-V3.1-Terminus",
+        "query": "Question: What is theranostics and how does it combine diagnostic and therapeutic approaches in precision medicine?",
+        "prompt_length": 8336,
+        "context_length": 7971,
+        "num_context_docs": 1
+      }
+    },
+    {
+      "event_type": "llm_response",
+      "component": "siliconflow_api",
+      "data": {
+        "operation": "generate_response",
+        "response_length": 1998,
+        "usage": {
+          "completion_tokens": 390,
+          "prompt_tokens": 1422,
+          "total_tokens": 1812,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens_details": null
+        },
+        "model": "deepseek-ai/DeepSeek-V3.1-Terminus"
+      }
+    },
+    {
+      "event_type": "query_complete",
+      "component": "rag_system",
+      "data": {
+        "run_id": "20260311_203842_6345",
+        "success": true,
+        "response_length": 1998,
+        "num_retrieved": 1
+      }
+    }
+  ]
+}

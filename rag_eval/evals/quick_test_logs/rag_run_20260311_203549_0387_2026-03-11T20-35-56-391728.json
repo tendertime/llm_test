@@ -1,0 +1,116 @@
+{
+  "run_id": "20260311_203549_0387",
+  "timestamp": "2026-03-11T20:35:56.391728",
+  "query": "Question: When is the scheduled launch date and time for the PSLV-C56 mission, and where will it be launched from?",
+  "result": {
+    "answer": "Based on the provided document, the PSLV-C56 mission is scheduled for launch on **Sunday, 30 July 2023 at 06:30 IST (01:00 UTC)** from the **Satish Dhawan Space Centre, Sriharikota, Andhra Pradesh, India**.",
+    "run_id": "20260311_203549_0387"
+  },
+  "num_documents": 1,
+  "traces": [
+    {
+      "event_type": "query_start",
+      "component": "rag_system",
+      "data": {
+        "run_id": "20260311_203549_0387",
+        "question": "Question: When is the scheduled launch date and time for the PSLV-C56 mission, and where will it be launched from?",
+        "question_length": 114,
+        "top_k": 3,
+        "total_documents": 1
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_start",
+        "query": "Question: When is the scheduled launch date and time for the PSLV-C56 mission, and where will it be launched from?",
+        "query_length": 114,
+        "top_k": 3,
+        "total_documents": 1
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_complete",
+        "num_retrieved": 1,
+        "scores": [
+          12
+        ],
+        "document_ids": [
+          0
+        ]
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_start",
+        "query": "Question: When is the scheduled launch date and time for the PSLV-C56 mission, and where will it be launched from?",
+        "query_length": 114,
+        "top_k": 3,
+        "total_documents": 1
+      }
+    },
+    {
+      "event_type": "retrieval",
+      "component": "retriever",
+      "data": {
+        "operation": "retrieve_complete",
+        "num_retrieved": 1,
+        "scores": [
+          12
+        ],
+        "document_ids": [
+          0
+        ]
+      }
+    },
+    {
+      "event_type": "llm_call",
+      "component": "siliconflow_api",
+      "data": {
+        "operation": "generate_response",
+        "model": "deepseek-ai/DeepSeek-V3.1-Terminus",
+        "query": "Question: When is the scheduled launch date and time for the PSLV-C56 mission, and where will it be launched from?",
+        "prompt_length": 977,
+        "context_length": 613,
+        "num_context_docs": 1
+      }
+    },
+    {
+      "event_type": "llm_response",
+      "component": "siliconflow_api",
+      "data": {
+        "operation": "generate_response",
+        "response_length": 206,
+        "usage": {
+          "completion_tokens": 59,
+          "prompt_tokens": 237,
+          "total_tokens": 296,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens_details": null
+        },
+        "model": "deepseek-ai/DeepSeek-V3.1-Terminus"
+      }
+    },
+    {
+      "event_type": "query_complete",
+      "component": "rag_system",
+      "data": {
+        "run_id": "20260311_203549_0387",
+        "success": true,
+        "response_length": 206,
+        "num_retrieved": 1
+      }
+    }
+  ]
+}

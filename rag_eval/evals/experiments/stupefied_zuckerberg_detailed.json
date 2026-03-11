@@ -1,0 +1,6 @@
+[
+  {
+    "question": "Question: Who directed the film Oppenheimer and who stars as J. Robert Oppenheimer in the film?",
+    "ground_truth": "Answer: Christopher Nolan directed the film Oppenheimer. Cillian Murphy stars as J. Robert Oppenheimer in the film.",
+    "source": "Oppenheimer (film)",
+    "context_v1": 

@@ -44,7 +44,6 @@ secrets.json
 # 数据文件（大文件和原始数据）
 longbench/data.zip
 longbench/extracted/
-longbench/ragas/*.csv
 rag_eval/evals/*.json
 rag_eval/evals/*.csv
 
